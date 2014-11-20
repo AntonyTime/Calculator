@@ -11,6 +11,7 @@ public class MainActivity extends Activity {
     private EditText scr;
     private float numberBf;
     private String operation;
+    private Boolean isResultshow = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +44,8 @@ public class MainActivity extends Activity {
             result = numberBf / numAf;
         }
         scr.setText(String.valueOf(result));
+        isResultshow = true;
+
     }
 
     private void getKeyboard(String str){
@@ -77,9 +80,15 @@ public class MainActivity extends Activity {
                 mResult();
                 break;
             default:
+
                 String numb = ((Button) view).getText().toString();
                 getKeyboard(numb);
+                if (isResultshow){
+                    scr.setText("0");
+                    isResultshow = false;
+                }
                 break;
+
             }
         }
     }
