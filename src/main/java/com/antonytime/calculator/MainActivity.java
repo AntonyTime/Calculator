@@ -67,13 +67,13 @@ public class MainActivity extends Activity {
             case R.id.btnPlus:
                 mMath("+");
                 break;
-            case R.id.btnSubtract:
+            case R.id.btnMinus:
                 mMath("-");
                 break;
-            case R.id.btnMultiply:
+            case R.id.btnMul:
                 mMath("*");
                 break;
-            case R.id.btnDivide:
+            case R.id.btnDiv:
                 mMath("/");
                 break;
             case R.id.btnEqual:
